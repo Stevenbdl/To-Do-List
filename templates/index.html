@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>To Do List App</title>
+</head>
+<body>
+    
+    <div class="head">
+        <h1 class="title">all task</h1>
+    </div>
+    <form action="{{ url_for('add_task') }}" method="post">
+        <center><input class="write-task" type="text" name="content-task"></center>
+        <div class="pisar">
+            <button class="add" type="submit">
+                <i class="fas fa-plus"></i><!-- Add button -->
+            </button>
+        </div>
+        </div>
+    </form>
+    {% for t in tasks %}
+        <form action="{{ url_for('delete_task') }}" method="post">
+            <div class="tasks"><!-- TASKS -->
+                <br><br>
+                <div class="task"><!-- TASK -->
+                    <input class="item-task" type="text" value="{{ t }}" name="task" readonly>
+                    <input class="delete-task" type="submit" value="Delete">
+                </div>
+            </div>
+        </form>
+    {% endfor %}
+</body>
+</html>

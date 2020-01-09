@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.title{/*Title in the top style*/
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.head{/*Style for top*/
+    width: 99%;
+    height: 100px;
+    padding: 2px;
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+}
+
+.fa-plus{
+    font-size: 15px;
+    color: #fff;
+}
+
+.add{/*Button Style*/
+    width: 5%;
+    padding: 20px;
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    border-radius: 50%;
+    margin: 20px;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+@media (max-width:700px){/*Responsibe*/
+    .add{
+        width: 20%;
+        padding: 40px;
+    }
+}
+
+.add:focus{/*quit light when button is pressed*/
+    outline: 0;
+}
+
+
+/*Task*/
+.task{
+    width: 99%;
+    height: 70px;
+    border: 1px solid #DBDBDB;
+}
+
+/*Style for input text*/
+.write-task{
+    width: 50%;
+    padding: 10px;
+    margin: 5px 5px;
+    font-size: 16px;
+}
+@media (max-width:700px){/*Responsibe*/
+    .write-task{
+        width: 80%;
+        font-size: 16px;
+    }
+}
+
+
+.item-task{
+    width: 90%;
+    border: none;
+    background: none;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.item-task:focus{
+    outline: 0;
+}
+
+.delete-task{
+    padding: 7px;
+    cursor: pointer;
+    color: #fff;
+    background: #FF0000;
+    border: none;
+    font-size: 15px;
+}
